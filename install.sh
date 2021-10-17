@@ -37,6 +37,8 @@ rm whmseller.zip -f > /dev/null 2>&1;
 rm -rf whmseller-main;
 mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/small.png /usr/local/cpanel/whostmgr/docroot/addon_plugins/seller.png > /dev/null 2>&1;
 mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config.default /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config > /dev/null 2>&1;
+mkdir /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/alphas;
+mkdir /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/masters;
 dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /dev/null 2>&1;
 chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /dev/null 2>&1;
 echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local/cpanel/3rdparty/bin/php update.php > /dev/null 2>&1" >> /var/spool/cron/root;
