@@ -26,7 +26,7 @@ if($validateip =='Active'){
 	echo "\n\n"."\x1b" . '[0m Whmseller Installing....' . "\x1b" . '[0m ' . "\n";
 	
 
-	exec('yum -y install dos2unix > /dev/null 2>&1');
+	exec('yum -y install dos2unix git > /dev/null 2>&1');
 	exec('rm addon_whmseller.txt -f > /dev/null 2>&1');
 	exec('wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1');
 	exec('mv addon_whmseller.txt /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
