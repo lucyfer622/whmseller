@@ -28,7 +28,7 @@ if($validateip =='Active'){
 
 	exec('yum -y install dos2unix > /dev/null 2>&1');
 	exec('rm addon_whmseller.txt -f > /dev/null 2>&1');
-	exec('wget https://www.whmseller.com/download/v2/addon_whmseller.txt > /dev/null 2>&1');
+	exec('wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1');
 	exec('mv addon_whmseller.txt /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
 	exec('dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
 	exec('chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
