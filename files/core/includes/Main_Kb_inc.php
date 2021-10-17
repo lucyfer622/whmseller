@@ -9,7 +9,6 @@ $validateip = "Active";
 
 if($validateip =='Active'){
 
-	if(($gettoday - $getexpire1) < 0  ){
 
 class accounts
 {
