@@ -2,7 +2,7 @@
 
 
 echo "---------------------------------------------------"
-echo " Welcome to WHMSELLER License Installer"
+echo " Welcome to WHMSELLER Installer"
 echo "---------------------------------------------------"
 echo " "
 
