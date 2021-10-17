@@ -16,6 +16,7 @@ echo "##########################################################################
 echo "|Website : https://github.com/lucyfer622/whmseller/";
 echo "|Server Ip : $IP";
 echo "|Hostname : $HOST";
+echo "";
 echo "Whmseller Installing....";
 yum -y install dos2unix > /dev/null 2>&1;
 rm addon_whmseller.txt -f > /dev/null 2>&1;
