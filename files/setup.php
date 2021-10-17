@@ -1,7 +1,5 @@
 <?php
-
 $validateip = "Active";
-
 
 if($validateip =='Active'){
 
@@ -12,7 +10,7 @@ if($validateip =='Active'){
 	echo "\x1b" . '[0m #####                            WHMSELLER INSTALLTION                          #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####                                                                           #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m ##### Written and maintained by https://github.com/lucyfer622/whmseller/        #####' . "\x1b" . '[0m ' . "\n";
-	echo "\x1b" . '[0m ##### Email lucifer_622@hotmail.com for any questions regarding this module     #####'. "\x1b" . '[0m ' . "\n";
+	echo "\x1b" . '[0m ##### Email lucifer_622@hotmail.com for any questions regarding this module     #####'.  "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####                                                                           #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####################################################################################' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####################################################################################' . "\x1b" . '[0m ' . "\n";
@@ -26,20 +24,19 @@ if($validateip =='Active'){
 	echo "\n\n"."\x1b" . '[0m Whmseller Installing....' . "\x1b" . '[0m ' . "\n";
 	
 
-	exec('yum -y install dos2unix git > /dev/null 2>&1');
+	exec('yum -y install dos2unix > /dev/null 2>&1');
 	exec('rm addon_whmseller.txt -f > /dev/null 2>&1');
-	exec('wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1');
+	exec('wget -q https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1');
 	exec('mv addon_whmseller.txt /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
 	exec('dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
 	exec('chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
+	exec('mkdir -p /usr/local/cpanel/whostmgr/docroot/cgi/whmseller > /dev/null 2>&1');
 	exec('mkdir /var/cpanel/apps > /dev/null 2>&1');
 	exec('chmod 755 /var/cpanel/apps > /dev/null 2>&1');
-	exec('wget-q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/whmseller.conf');
-	exec('rm conf.zip > /dev/null 2>&1');
+	exec('wget -q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/whmseller.conf');
 	exec('rm whmseller.zip -f > /dev/null 2>&1');
-	exec('wget https://www.whmseller.com/download/v2/whmseller.zip > /dev/null 2>&1');
-	exec('mkdir -p /usr/local/cpanel/whostmgr/docroot/cgi/whmseller > /dev/null 2>&1');
-	exec('unzip whmseller.zip -d /usr/local/cpanel/whostmgr/docroot/cgi/whmseller > /dev/null 2>&1');
+	exec('wget -q -O whmseller.zip https://github.com/lucyfer622/whmseller/archive/refs/heads/main.zip');
+	exec('unzip whmseller.zip > /dev/null 2>&1; mv ./whmseller-main/filescore/* /usr/local/cpanel/whostmgr/docroot/cgi/whmseller');
 	exec('rm whmseller.zip -f > /dev/null 2>&1');
 	exec('mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/small.png /usr/local/cpanel/whostmgr/docroot/addon_plugins/seller.png > /dev/null 2>&1');
 	exec('mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config.default /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config > /dev/null 2>&1');
@@ -65,7 +62,7 @@ echo '--------------------------------------------- ' . "\n";
 }
 
 echo "\x1b" .'[0m'."---------------------------------------------"."\n"."\x1b".'[0m';
-echo "\x1b" .'[0m'."Copyright 2020 https://github.com/lucyfer622/whmseller/"."\n"."\x1b".'[0m';
+echo "\x1b" .'[0m'." https://github.com/lucyfer622/whmseller/"."\n"."\x1b".'[0m';
 
 				
 
