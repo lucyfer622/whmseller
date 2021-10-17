@@ -20,6 +20,6 @@ else
 	cd /root/;
 	rm -rf setup.php;
 	wget -q -O setup.php https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/setup.php; chmod +x setup;
-	/opt/cpanel/ea-php73/root/usr/bin/php setup;.php
+	/opt/cpanel/ea-php73/root/usr/bin/php setup.php;
 	rm -rf setup.php;
 fi
