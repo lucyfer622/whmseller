@@ -31,7 +31,10 @@ wget -q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https
 rm whmseller.zip -f > /dev/null 2>&1;
 wget -q -O whmseller.zip https://github.com/lucyfer622/whmseller/archive/refs/heads/main.zip;
 unzip whmseller.zip > /dev/null 2>&1; mv ./whmseller-main/files/core/* /usr/local/cpanel/whostmgr/docroot/cgi/whmseller;
-rm whmseller.zip ./whmseller-main -f > /dev/null 2>&1;
+unzip /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/vendor.zip -d /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/;
+rm -rf /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/vendor.zip;
+rm whmseller.zip -f > /dev/null 2>&1;
+rm -rf whmseller-main;
 mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/small.png /usr/local/cpanel/whostmgr/docroot/addon_plugins/seller.png > /dev/null 2>&1;
 mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config.default /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config > /dev/null 2>&1;
 dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /dev/null 2>&1;
