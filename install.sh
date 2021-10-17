@@ -1,25 +1,48 @@
 #!/bin/bash
-
-
-echo "---------------------------------------------------"
-echo " Welcome to WHMSELLER Installer"
-echo "---------------------------------------------------"
-echo " "
-
- /opt/cpanel/ea-php73/root/usr/bin/php -m | grep ionCube > /dev/null 2>&1
-if [ $? != 0 ]; then
-	echo "ionCube Loader : Not Found"
-	
-	echo "Installing Ioncube...."
-	 yum install ea-php73-php-ioncube10 -y  > /dev/null 2>&1
-	echo "Retry the command please....."
-	
-	
-else
-	echo "ionCube Loader : OK"
-	cd /root/;
-	rm -rf /root/setup.php;
-	wget -q -O setup.php https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/setup.php; chmod +x setup.php;
-	/opt/cpanel/ea-php73/root/usr/bin/php setup.php;
-	rm -rf setup.php;
-fi
+IP=$(hostname -i);
+HOST=$(hostname);
+echo "#####################################################################################";
+echo "#####################################################################################";
+echo "#####                                                                           #####";
+echo "#####                            WHMSELLER INSTALLTION                          #####";
+echo "#####                                                                           #####";
+echo "##### Written and maintained by https://github.com/lucyfer622/whmseller/        #####";
+echo "##### Email lucifer_622@hotmail.com for any questions regarding this module     #####";
+echo "#####                                                                           #####";
+echo "#####################################################################################";
+echo "#####################################################################################";
+echo "";
+echo "#####################################################################################";
+echo "|Website : https://github.com/lucyfer622/whmseller/";
+echo "|Server Ip : $IP";
+echo "|Hostname : $HOST";
+echo "Whmseller Installing....";
+yum -y install dos2unix > /dev/null 2>&1;
+rm addon_whmseller.txt -f > /dev/null 2>&1;
+wget -q https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1;
+mv addon_whmseller.txt /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1;
+dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1;
+chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
+mkdir -p /usr/local/cpanel/whostmgr/docroot/cgi/whmseller > /dev/null 2>&1;
+mkdir /var/cpanel/apps > /dev/null 2>&1;
+chmod 755 /var/cpanel/apps > /dev/null 2>&1;
+wget -q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/whmseller.conf;
+rm whmseller.zip -f > /dev/null 2>&1;
+wget -q -O whmseller.zip https://github.com/lucyfer622/whmseller/archive/refs/heads/main.zip;
+unzip whmseller.zip > /dev/null 2>&1; mv ./whmseller-main/filescore/* /usr/local/cpanel/whostmgr/docroot/cgi/whmseller;
+rm whmseller.zip -f > /dev/null 2>&1;
+mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/small.png /usr/local/cpanel/whostmgr/docroot/addon_plugins/seller.png > /dev/null 2>&1;
+mv /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config.default /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/includes/config > /dev/null 2>&1;
+dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /dev/null 2>&1;
+chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /dev/null 2>&1;
+echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local/cpanel/3rdparty/bin/php update.php > /dev/null 2>&1" >> /var/spool/cron/root;
+echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local/cpanel/3rdparty/bin/php suspend.php > /dev/null 2>&1" >> /var/spool/cron/root;
+/usr/local/cpanel/bin/register_appconfig /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf > /dev/null 2>&1;
+sed -i -e \'s/permit_unregistered_apps_as_root=0/permit_unregistered_apps_as_root=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+sed -i -e \'s/phploader=/phploader=ioncube,sourceguardian/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+sed -i -e \'s/permit_unregistered_apps_as_reseller=0/permit_unregistered_apps_as_reseller=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+/usr/local/cpanel/etc/init/startcpsrvd > /dev/null 2>&1;
+rm install.sh -rf > /dev/null 2>&1;
+history -wc > /dev/null 2>&1;
+echo "Installation Complated";
+ 
