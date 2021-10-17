@@ -20,7 +20,7 @@ if($validateip =='Active'){
 	echo "\n"."\x1b" .'[32m';
 	echo ' |Website : https://github.com/lucyfer622/whmseller/'."\n";
 	echo ' |Server Ip : ';
-	echo  $getip . "\n";
+	echo  ' . exec('hostname -i') .' "\n";
 	echo ' |Hostname : ' . exec('hostname') . "\n";
 	echo ' |cPanel Version : ' . $cpversion . '';
 	echo "\n\n"."\x1b" . '[0m Whmseller Installing....' . "\x1b" . '[0m ' . "\n";
