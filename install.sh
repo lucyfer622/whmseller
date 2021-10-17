@@ -22,7 +22,7 @@ rm addon_whmseller.txt -f > /dev/null 2>&1;
 wget -q https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/addon_whmseller.txt > /dev/null 2>&1;
 mv addon_whmseller.txt /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1;
 dos2unix /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1;
-chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
+chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1;
 mkdir -p /usr/local/cpanel/whostmgr/docroot/cgi/whmseller > /dev/null 2>&1;
 mkdir /var/cpanel/apps > /dev/null 2>&1;
 chmod 755 /var/cpanel/apps > /dev/null 2>&1;
