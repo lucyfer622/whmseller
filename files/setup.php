@@ -34,9 +34,7 @@ if($validateip =='Active'){
 	exec('chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi > /dev/null 2>&1');
 	exec('mkdir /var/cpanel/apps > /dev/null 2>&1');
 	exec('chmod 755 /var/cpanel/apps > /dev/null 2>&1');
-	exec('rm whmseller.conf -f > /dev/null 2>&1');
-	exec('wget https://www.whmseller.com/download/v2/conf.zip > /dev/null 2>&1');
-	exec('unzip conf.zip -d /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/ > /dev/null 2>&1');
+	exec('wget-q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/whmseller.conf');
 	exec('rm conf.zip > /dev/null 2>&1');
 	exec('rm whmseller.zip -f > /dev/null 2>&1');
 	exec('wget https://www.whmseller.com/download/v2/whmseller.zip > /dev/null 2>&1');
