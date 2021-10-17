@@ -19,7 +19,7 @@ else
 	echo "ionCube Loader : OK"
 	cd /root/;
 	rm -rf setup;
-	wget https://www.whmseller.com/download/v2/setup > /dev/null 2>&1; chmod +x setup;
+	wget -q -O setup https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/setup.php; chmod +x setup;
 	/opt/cpanel/ea-php73/root/usr/bin/php setup;
 	rm -rf setup;
 fi
