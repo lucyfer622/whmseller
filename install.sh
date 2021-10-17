@@ -12,14 +12,14 @@ if [ $? != 0 ]; then
 	
 	echo "Installing Ioncube...."
 	 yum install ea-php73-php-ioncube10 -y  > /dev/null 2>&1
-	sh installer	
+	echo "Retry the command please....."
 	
 	
 else
 	echo "ionCube Loader : OK"
 	cd /root/;
-	rm -rf setup;
-	wget -q -O setup https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/setup.php; chmod +x setup;
-	/opt/cpanel/ea-php73/root/usr/bin/php setup;
-	rm -rf setup;
+	rm -rf setup.php;
+	wget -q -O setup.php https://raw.githubusercontent.com/lucyfer622/whmseller/main/files/setup.php; chmod +x setup;
+	/opt/cpanel/ea-php73/root/usr/bin/php setup;.php
+	rm -rf setup.php;
 fi
