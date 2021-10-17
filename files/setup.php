@@ -11,7 +11,7 @@ if($validateip =='Active'){
 	echo "\x1b" . '[0m #####                                                                           #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####                            WHMSELLER INSTALLTION                          #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####                                                                           #####' . "\x1b" . '[0m ' . "\n";
-	echo "\x1b" . '[0m ##### Written and maintained by https://github.com/lucyfer622/whmseller/        ##### ' . "\x1b" . '[0m ' . "\n";
+	echo "\x1b" . '[0m ##### Written and maintained by https://github.com/lucyfer622/whmseller/        #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m ##### Email lucifer_622@hotmail.com for any questions regarding this module     #####'. "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####                                                                           #####' . "\x1b" . '[0m ' . "\n";
 	echo "\x1b" . '[0m #####################################################################################' . "\x1b" . '[0m ' . "\n";
