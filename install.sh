@@ -31,7 +31,7 @@ wget -q -O /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf https
 rm whmseller.zip -f > /dev/null 2>&1;
 wget -q -O whmseller.zip https://github.com/lucyfer622/whmseller/archive/refs/heads/main.zip;
 unzip whmseller.zip > /dev/null 2>&1; mv ./whmseller-main/files/core/* /usr/local/cpanel/whostmgr/docroot/cgi/whmseller;
-unzip /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/vendor.zip -d /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/;
+unzip /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/vendor.zip -d /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/ > /dev/null 2>&1;
 rm -rf /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/assets/vendor.zip;
 rm whmseller.zip -f > /dev/null 2>&1;
 rm -rf whmseller-main;
