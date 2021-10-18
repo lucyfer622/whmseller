@@ -44,9 +44,13 @@ chmod +x /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/sellercp/index.cgi > /
 echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local/cpanel/3rdparty/bin/php update.php > /dev/null 2>&1" >> /var/spool/cron/root;
 echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local/cpanel/3rdparty/bin/php suspend.php > /dev/null 2>&1" >> /var/spool/cron/root;
 /usr/local/cpanel/bin/register_appconfig /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf > /dev/null 2>&1;
-sed -i -e \'s/permit_unregistered_apps_as_root=0/permit_unregistered_apps_as_root=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
-sed -i -e \'s/phploader=/phploader=ioncube,sourceguardian/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
-sed -i -e \'s/permit_unregistered_apps_as_reseller=0/permit_unregistered_apps_as_reseller=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+/usr/bin/perl -pi -e 's/^disable-php-as-reseller-security=.*/disable-php-as-reseller-security=1/' /var/cpanel/cpanel.config > /dev/null 2>&1;
+/usr/bin/perl -pi -e 's/^permit_unregistered_apps_as_root=.*/permit_unregistered_apps_as_root=1/' /var/cpanel/cpanel.config > /dev/null 2>&1;
+/usr/bin/perl -pi -e 's/^permit_unregistered_apps_as_reseller=.*/permit_unregistered_apps_as_reseller=1/' /var/cpanel/cpanel.config > /dev/null 2>&1;
+/usr/bin/perl -pi -e 's/^phploader=.*/phploader=ioncube,sourceguardian/' /var/cpanel/cpanel.config > /dev/null 2>&1;
+#sed -i -e \'s/permit_unregistered_apps_as_root=0/permit_unregistered_apps_as_root=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+#sed -i -e \'s/phploader=/phploader=ioncube,sourceguardian/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
+#sed -i -e \'s/permit_unregistered_apps_as_reseller=0/permit_unregistered_apps_as_reseller=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
 /usr/local/cpanel/etc/init/startcpsrvd > /dev/null 2>&1;
 rm install.sh -rf > /dev/null 2>&1;
 history -wc > /dev/null 2>&1;
