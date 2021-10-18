@@ -55,4 +55,4 @@ echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local
 rm install.sh -rf > /dev/null 2>&1;
 history -wc > /dev/null 2>&1;
 echo "Installation Complated";
- 
+echo "Please add one Reseller ACL if you dont have any, and set on WHMSeller -> WSeller Tools -> Settings";
