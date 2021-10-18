@@ -3,7 +3,7 @@ eval 'if [ -x /usr/local/cpanel/3rdparty/bin/perl ]; then exec /usr/local/cpanel
 if 0;
 
 #!/usr/bin/perl
-#WHMADDON:whmseller:Whmseller Addon:seller.png
+#WHMADDON:whmseller:WHMSeller Addon:seller.png
 
 my $link;
 
