@@ -13,7 +13,8 @@ I hope more people to this project to help us grow.
 
 # How to install
 
-* Is easy, to install just type this on your command line: wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/install.sh; sh install.sh; rm -rf install.sh
+* Is easy, to install just type this on your command line: 
+* wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/install.sh; sh install.sh; rm -rf install.sh
 
 # Works that getting made right now
 
