@@ -2,10 +2,11 @@
 if(!defined('SITE_LOADED')) {
     die();
 }
-$version = "trim(file_get_contents('includes/version'))";
+$version = trim(file_get_contents('includes/version'));
+
 echo '</div>'."\r\n";
 echo'<footer class="footer"><div class="row align-items-center justify-content-xl-between">'."\r\n".'<div class="col-xl-6">'."\r\n".'<div class="copyright text-center text-xl-left text-muted">©';echo date('Y');
-echo'<a href="https://github.com/lucyfer622/whmseller/" class="font-weight-bold ml-1" target="_blank">WHMSELLER V $version</a>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</footer>'."\r\n".'</div>'."\r\n".'</div>';
+echo'<a href="https://github.com/lucyfer622/whmseller/" class="font-weight-bold ml-1" target="_blank">WHMSELLER V'.$version.'</a>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</footer>'."\r\n".'</div>'."\r\n".'</div>';
 echo'<script src="./assets/vendor/jquery/dist/jquery.min.js"></script>'."\r\n".'<script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>'."\r\n".' <script src="./assets/js/argon.js?v=1.0.0"></script>'."\r\n";
 if ($fileName = basename($_SERVER['SCRIPT_FILENAME'], '.php'));
     if ($fileName == 'alpha-create') {
