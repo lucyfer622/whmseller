@@ -51,7 +51,7 @@ echo "0 1 * * * cd /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/; /usr/local
 #sed -i -e \'s/permit_unregistered_apps_as_root=0/permit_unregistered_apps_as_root=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
 #sed -i -e \'s/phploader=/phploader=ioncube,sourceguardian/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
 #sed -i -e \'s/permit_unregistered_apps_as_reseller=0/permit_unregistered_apps_as_reseller=1/g\' /var/cpanel/cpanel.config > /dev/null 2>&1;
-/usr/local/cpanel/etc/init/startcpsrvd > /dev/null 2>&1;
+/bin/systemctl restart cpanel.service > /dev/null 2>&1;
 rm install.sh -rf > /dev/null 2>&1;
 history -wc > /dev/null 2>&1;
 echo "Installation Complated";
