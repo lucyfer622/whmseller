@@ -35,6 +35,7 @@ If you like our plugin please be kind and give your tips on our discord server, 
 * Removed all external links to work properly 
 * Insert the new update script
 
+
 * Release: 0.2 *
 * Improved update
 * WHMCS Integration
