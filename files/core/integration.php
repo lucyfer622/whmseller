@@ -14,7 +14,7 @@ include './files/body.php';
 echo '<div class="row">'."\r\n".'<div class="col-xl-8 mb-5 mb-xl-0">'."\r\n".'<div class="card shadow">'."\r\n".'<div class="card-header border-0">'."\r\n".'<div class="row align-items-center">'."\r\n".'<div class="col">'."\r\n".'<h3 class="mb-0">Intergration Modules</h3>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'<div class="table-responsive">'."\r\n".'<!-- Projects table -->'."\r\n".'<table class="table align-items-center table-flush">'."\r\n".'<thead class="thead-light">';
 echo'<tr>';
 echo'<th scope="col">Billing System</th>'."\r\n".'<th scope="col">File Name</th>'."\r\n".'<th scope="col">Download Link</th>';
-echo '<tbody><tr><td><a href="#"><img src="assets/img/brand/whmcs.png" height="32" width="130"></a></td><td>whmcsmodule.zip</td><td><a href="./billingtool/whmsellerroot.zip" target="_blank" class="btn bta btn-sm btn-primary">DOWNLOAD WHMCS ROOT MODULE</a></td></tr>	</tbody>';
+echo '<tbody><tr><td><a href="#"><img src="assets/img/brand/whmcs.png" height="32" width="130"></a></td><td>whmcsmodule.zip</td><td><a href="./billingtool/whmseller.zip" target="_blank" class="btn bta btn-sm btn-primary">DOWNLOAD WHMCS ROOT MODULE</a></td></tr>	</tbody>';
 
  
 echo "\r\n" . ' </td>'."\r\n".'</tbody>'."\r\n".'</tr></table>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'<div class="col-xl-4 mt-0"><div class="card shadow">'."\r\n".'<div class="card-header border-0">'."\r\n".'<div class="row align-items-center">'."\r\n".'<div class="col">'."\r\n".'<h3 class="mb-0">Installation Guide</h3>'."\r\n".'</div>'."\r\n".'</div>'."\r\n".'</div>
