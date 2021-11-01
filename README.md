@@ -18,7 +18,7 @@ I hope more people to this project to help us grow.
 
 # How to uninstall
 
-* Is easy, to install just type this on your command line: 
+* Is easy, to uninstall just type this on your command line: 
 * wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/uninstall.sh; sh uninstall.sh
 
 # Works that getting made right now
