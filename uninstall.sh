@@ -21,7 +21,7 @@ echo "Whmseller uninstalling....";
 /usr/local/cpanel/bin/unregister_appconfig /usr/local/cpanel/whostmgr/docroot/cgi/whmseller/whmseller.conf;
 rm -rf /usr/local/cpanel/whostmgr/docroot/cgi/addon_whmseller.cgi;
 rm -rf /usr/local/cpanel/whostmgr/docroot/cgi/whmseller;
-/usr/bin/crontab -l | grep -v 'whmseller' >> /var/spool/cron/root;
+crontab -u root -l | grep -v 'whmseller' | crontab -u root -
 /bin/systemctl restart cpanel.service > /dev/null 2>&1;
 echo "Hope we see you in near future ;) You can allways count on our plugin to your needs";
 rm -rf uninstall.sh;
