@@ -16,6 +16,11 @@ I hope more people to this project to help us grow.
 * Is easy, to install just type this on your command line: 
 * wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/install.sh; sh install.sh; rm -rf install.sh
 
+# How to uninstall
+
+* Is easy, to install just type this on your command line: 
+* wget https://raw.githubusercontent.com/lucyfer622/whmseller/main/uninstall.sh; sh uninstall.sh
+
 # Works that getting made right now
 
 * Work on updade.php for new links and make them workable
