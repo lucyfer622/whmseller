@@ -28,6 +28,17 @@ I hope more people to this project to help us grow.
 
 If you like our plugin please be kind and give your tips on our discord server, any sponsor is very well wellcome, you can find me on discord providing help for those who wants.
 
+# Releases
+
+* Release: 0.1 *
+* Changed encrypted code to source code 
+* Removed all external links to work properly 
+* Insert the new update script
+
+* Release: 0.2 *
+* Improved update
+* WHMCS Integration
+* Uninstall script made
 # Sponsor: https://www.buymeacoffee.com/lucyfer622
 
 Right now we are on discord: https://discord.gg/BEgDp2vgBK , we can help you using our plugin
